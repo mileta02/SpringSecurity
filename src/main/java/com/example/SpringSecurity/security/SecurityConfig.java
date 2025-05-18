@@ -27,7 +27,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(customizer -> customizer.disable());
-        http.authorizeHttpRequests(request -> request.anyRequest().authenticated());
+        //allow register without login info
+        http.authorizeHttpRequests(request -> request.requestMatchers("register").permitAll().anyRequest().authenticated());
         //basic auth
         http.httpBasic(Customizer.withDefaults());
         //login form
