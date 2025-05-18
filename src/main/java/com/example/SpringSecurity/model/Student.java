@@ -1,5 +1,7 @@
 package com.example.SpringSecurity.model;
 
+import jakarta.persistence.Entity;
+
 public class Student {
     private int id;
     private String name;

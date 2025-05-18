@@ -1,4 +1,4 @@
-package com.example.SpringSecurity;
+package com.example.SpringSecurity.controller;
 
 import com.example.SpringSecurity.model.Student;
 import jakarta.servlet.http.HttpServletRequest;
